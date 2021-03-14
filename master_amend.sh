@@ -31,7 +31,7 @@ mkdir Reference/South/chr${1}
 #### Reference Panel Setup ####
 ###############################
 ### convert reference panel files to plink files (ped/map)
-vcftools --gzvcf /Volumes/hts_core/Shared/1000g/phase3_20130502/ALL.chr${1}.phase3_shapeit2_mvncall_integrated_v5.20130502.genotypes.vcf.gz --plink --chr ${1} --out Reference/Full/chr${1}/ref_chr${1}
+vcftools --gzvcf /.../1000g/phase3_20130502/ALL.chr${1}.phase3_shapeit2_mvncall_integrated_v5.20130502.genotypes.vcf.gz --plink --chr ${1} --out Reference/Full/chr${1}/ref_chr${1}
 
 ### read plink reference panel and make binary files
 plink --file Reference/Full/chr${1}/ref_chr${1} --make-bed --out Reference/Full/chr${1}/ref_chr${1}
